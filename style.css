@@ -1,0 +1,43 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    /* This font gives a video game feel */
+}
+
+#game-container {
+    width: 100%;
+    height: auto;
+}
+
+.game-level {
+    min-height: 100vh;
+    /* Each level takes at least one full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Example backgrounds for different levels */
+#level-intro {
+    background: url('path-to-your-intro-background-image.jpg') no-repeat center center/cover;
+}
+
+#level-about {
+    background: url('path-to-your-about-background-image.jpg') no-repeat center center/cover;
+}
+
+#level-projects {
+    background: url('path-to-your-projects-background-image.jpg') no-repeat center center/cover;
+}
+
+#level-contact {
+    background: url('path-to-your-contact-background-image.jpg') no-repeat center center/cover;
+}
