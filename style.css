@@ -27,17 +27,17 @@ html {
 
 /* Example backgrounds for different levels */
 #level-intro {
-    background: url('/images/intro-background.jpg') no-repeat center center/cover;
+    background: url('/images/space.png') no-repeat center center/cover;
 }
 
 #level-about {
-    background: url('/images/about-background.jpg') no-repeat center center/cover;
+    background: url('/images/space.png') no-repeat center center/cover;
 }
 
 #level-projects {
-    background: url('/images/projects-background.jpg') no-repeat center center/cover;
+    background: url('/images/space.png') no-repeat center center/cover;
 }
 
 #level-contact {
-    background: url('/images/contact-background.jpg') no-repeat center center/cover;
+    background: url('/images/space.png') no-repeat center center/cover;
 }
