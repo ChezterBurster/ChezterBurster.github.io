@@ -27,7 +27,8 @@ html {
 
 /* Example backgrounds for different levels */
 #level-intro {
-    background: url('/images/intro-background.jpg') no-repeat center center/cover;
+    background: red;
+    /* Temporarily set to red to ensure visibility */
 }
 
 #level-about {
