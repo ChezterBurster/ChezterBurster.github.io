@@ -1,43 +1,44 @@
 body,
 html {
-    height: 100%;
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
-    /* This font gives a video game feel */
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    /* Prevent scrolling */
 }
 
-#game-container {
-    width: 100%;
-    height: auto;
-}
-
-.game-level {
-    min-height: 100vh;
-    /* Each level takes at least one full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+#space-background {
     position: relative;
-    padding: 50px;
-    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: url('images/space-background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-/* Example backgrounds for different levels */
-#level-intro {
-    background: url('/images/space.png') no-repeat center center/cover;
+#spaceship {
+    position: absolute;
+    width: 70px;
+    /* Adjust based on your image size */
+    animation: flyAcross 20s linear infinite;
 }
 
-#level-about {
-    background: url('/images/space.png') no-repeat center center/cover;
-}
+/* Keyframe animation */
+@keyframes flyAcross {
+    0% {
+        left: -150px;
+        /* Start off-screen to the left */
+        top: 50%;
+    }
 
-#level-projects {
-    background: url('/images/space.png') no-repeat center center/cover;
-}
+    50% {
+        left: 110%;
+        /* Move to the right of the screen */
+        top: 50%;
+    }
 
-#level-contact {
-    background: url('/images/space.png') no-repeat center center/cover;
+    100% {
+        left: -150px;
+        /* Move back off-screen to the left */
+        top: 50%;
+    }
 }
