@@ -63,11 +63,14 @@ body {
     display: flex;
 }
 
-/* Add this to your existing styles.css file */
 
 /* Contact form styles */
 #contactForm {
-    margin-top: 20px;
+    width: 70%;
+    height: 60%;
+    max-width: 800px;
+    /* You can adjust this value as needed */
+    margin: auto;
 }
 
 #contactForm input,
@@ -79,9 +82,17 @@ body {
     /* Turquoise text */
     margin-bottom: 10px;
     padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    /* Makes sure padding doesn't affect width */
+    width: calc(100% - 22px);
+    /* Adjust width to account for padding and border */
+    height: 15%;
+    /* Adjust the height for input fields if needed */
+    resize: none;
+    /* This will remove the resize feature for textarea */
+}
+
+#contactForm textarea {
+    height: 35%;
+    /* Adjust the height of the textarea */
 }
 
 #contactForm button {
