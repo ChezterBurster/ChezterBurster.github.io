@@ -66,11 +66,14 @@ body {
 
 /* Contact form styles */
 #contactForm {
-    width: 70%;
-    height: 60%;
+    width: 70vw;
     max-width: 800px;
-    /* You can adjust this value as needed */
+    /* You can keep this to limit the form width on very wide screens */
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* This will distribute the space inside the form */
 }
 
 #contactForm input,
@@ -81,18 +84,17 @@ body {
     color: #40e0d0;
     /* Turquoise text */
     margin-bottom: 10px;
-    padding: 10px;
-    width: calc(100% - 22px);
-    /* Adjust width to account for padding and border */
-    height: 15%;
-    /* Adjust the height for input fields if needed */
-    resize: none;
-    /* This will remove the resize feature for textarea */
+    padding: 1vw;
+    /* Padding based on the width of the viewport */
+    width: calc(100% - 2vw);
+    /* Adjust width to account for padding */
 }
 
 #contactForm textarea {
-    height: 35%;
-    /* Adjust the height of the textarea */
+    height: 20vh;
+    /* Height based on the viewport height */
+    resize: none;
+    /* Prevents resizing the textarea */
 }
 
 #contactForm button {
@@ -102,7 +104,8 @@ body {
     /* Turquoise outline */
     color: #40e0d0;
     /* Turquoise text */
-    padding: 10px 20px;
+    padding: 1vw 2vw;
+    /* Padding based on the width of the viewport */
     cursor: pointer;
     transition: all 0.3s;
 }
