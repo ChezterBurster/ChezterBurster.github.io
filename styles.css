@@ -62,3 +62,49 @@ body {
 .section.active {
     display: flex;
 }
+
+/* Add this to your existing styles.css file */
+
+/* Contact form styles */
+#contactForm {
+    margin-top: 20px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    background: #333;
+    /* Dark gray background */
+    border: 1px solid #555;
+    color: #40e0d0;
+    /* Turquoise text */
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    /* Makes sure padding doesn't affect width */
+}
+
+#contactForm button {
+    background: #000;
+    /* Black background */
+    border: 2px solid #40e0d0;
+    /* Turquoise outline */
+    color: #40e0d0;
+    /* Turquoise text */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#contactForm button:hover {
+    background: #40e0d0;
+    /* Turquoise background on hover */
+    color: #000;
+    /* Black text on hover */
+}
+
+/* Adjusts the form output display */
+#formOutput {
+    margin-top: 20px;
+    color: #fff;
+}

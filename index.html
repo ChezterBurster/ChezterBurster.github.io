@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Developer Portfolio</title>
+    <title>Kevin Rivera</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -19,14 +19,16 @@
 
     <div class="content">
         <section id="home" class="section">
-            <h1>Developer Name</h1>
-            <p>"Inspirational quote goes here."</p>
+            <h1>Kevin Rivera</h1>
+            <p>"An expert is a man who has made all the mistakes that can be made in a very narrow field"</p>
             <p>Tech Stack: [placeholder]</p>
         </section>
 
         <section id="about" class="section">
             <h1>About Me</h1>
-            <p>This is the about me section.</p>
+            <p>Even though I've always had clear that I wanted to be a developer, a few times I've drifted to other areas not that far
+            away from my goal. With that said, I've also never left my learning journey, and those drifts have always being to
+            expand my knowledge and skills. I believed there is not a single thing that can be considered a useless experience.</p>
         </section>
 
         <section id="projects" class="section">
@@ -36,9 +38,13 @@
 
         <section id="contact" class="section">
             <h1>Contact</h1>
-            <form>
-                <!-- Add your contact form fields here -->
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required /><br>
+                <input type="email" id="email" placeholder="Your Email" required /><br>
+                <textarea id="message" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send</button>
             </form>
+            <div id="formOutput"></div>
         </section>
     </div>
 
