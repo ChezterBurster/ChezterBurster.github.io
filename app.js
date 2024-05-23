@@ -1,23 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var canvas = document.getElementById('spaceCanvas');
-    var ctx = canvas.getContext('2d');
-    var width = canvas.width = window.innerWidth;
-    var height = canvas.height = window.innerHeight;
-    var spaceship = new Image();
-    spaceship.src = 'images/spaceship.png'; // Replace with your image path
+    var spaceship = document.getElementById('spaceship');
+    var spaceshipSpeed = 1; // Speed of the spaceship, can be configured
+    var mouseX = 0;
+    var mouseY = 0;
 
-    var angle = 0;
+    // Update the spaceship's speed here if needed
+    spaceshipSpeed = 2; // Increase to make the spaceship move faster
 
-    function draw() {
-        ctx.clearRect(0, 0, width, height); // Clear the canvas
-        var x = width / 2 + Math.sin(angle) * 200; // Circle center x + radius
-        var y = height / 2 + Math.cos(angle) * 200; // Circle center y + radius
-        ctx.drawImage(spaceship, x, y, 100, 100); // Draw the spaceship
+    document.addEventListener('mousemove', function (event) {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+    });
 
-        angle += 0.01; // Change the angle for the next frame
+    function moveSpaceship() {
+        var rect = spaceship.getBoundingClientRect();
+        var spaceshipX = rect.left + (rect.right - rect.left) / 2;
+        var spaceshipY = rect.top + (rect.bottom - rect.top) / 2;
+        var deltaX = mouseX - spaceshipX;
+        var deltaY = mouseY - spaceshipY;
+        var distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
-        requestAnimationFrame(draw); // Request the next frame
+        if (distance > 1) {
+            var moveX = spaceshipSpeed * (deltaX / distance);
+            var moveY = spaceshipSpeed * (deltaY / distance);
+
+            spaceship.style.left = (spaceship.offsetLeft + moveX) + 'px';
+            spaceship.style.top = (spaceship.offsetTop + moveY) + 'px';
+        }
+
+        requestAnimationFrame(moveSpaceship);
     }
 
-    spaceship.onload = draw; // Start the animation once the image is loaded
+    requestAnimationFrame(moveSpaceship);
 });
