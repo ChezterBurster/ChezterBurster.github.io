@@ -10,7 +10,20 @@
 
 <body>
 
+    <div class="menu">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('contact')">Contact</button>
+    </div>
+
     <div class="content">
+        <section id="home" class="section">
+            <h1>Developer Name</h1>
+            <p>"Inspirational quote goes here."</p>
+            <p>Tech Stack: [placeholder]</p>
+        </section>
+
         <section id="about" class="section">
             <h1>About Me</h1>
             <p>This is the about me section.</p>
@@ -23,16 +36,11 @@
 
         <section id="contact" class="section">
             <h1>Contact</h1>
-            <p>This is the contact form section.</p>
-            <!-- Add your contact form here -->
+            <form>
+                <!-- Add your contact form fields here -->
+            </form>
         </section>
     </div>
-
-    <footer class="menu">
-        <button onclick="highlightSection('about')">About Me</button>
-        <button onclick="highlightSection('projects')">Projects</button>
-        <button onclick="highlightSection('contact')">Contact</button>
-    </footer>
 
     <script src="script.js"></script>
 </body>

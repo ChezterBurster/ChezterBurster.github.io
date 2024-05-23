@@ -1,17 +1,22 @@
-body,
+/* styles.css */
 html {
+    height: 100%;
+}
+
+body {
     margin: 0;
     padding: 0;
     background: #111;
     color: #40e0d0;
     font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .menu {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 10px 0;
 }
 
@@ -35,9 +40,25 @@ html {
     text-shadow: 0 0 10px #40e0d0, 0 0 20px #40e0d0;
 }
 
-.section {
-    padding: 50px;
-    min-height: 100vh;
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* You will need to add more styles for layout, typography, and responsive design. */
+.section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section.active {
+    display: flex;
+}
