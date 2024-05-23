@@ -4,13 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Adventure</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Game Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <img src="images/spaceship.png" id="spaceship" alt="Spaceship" style="position: absolute;">
-    <script src="app.js"></script>
+
+    <div class="content">
+        <section id="about" class="section">
+            <h1>About Me</h1>
+            <p>This is the about me section.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <p>This is the projects section.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h1>Contact</h1>
+            <p>This is the contact form section.</p>
+            <!-- Add your contact form here -->
+        </section>
+    </div>
+
+    <footer class="menu">
+        <button onclick="highlightSection('about')">About Me</button>
+        <button onclick="highlightSection('projects')">Projects</button>
+        <button onclick="highlightSection('contact')">Contact</button>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
