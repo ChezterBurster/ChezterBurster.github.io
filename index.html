@@ -6,49 +6,225 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Rivera</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/00a4889d3f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <header class="header">
+        <a href="#home" class="logo">Kevin
+        <span>Rivera</span></a>
 
-    <div class="menu">
-        <button onclick="showSection('home')">Home</button>
-        <button onclick="showSection('about')">About Me</button>
-        <button onclick="showSection('projects')">Projects</button>
-        <button onclick="showSection('contact')">Contact</button>
-    </div>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#aboutme">My Journey</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <div class="content">
-        <section id="home" class="section">
-            <h1>Kevin Rivera</h1>
-            <p>"An expert is a man who has made all the mistakes that can be made in a very narrow field"</p>
-            <p>Tech Stack: [placeholder]</p>
-            <div id="circuitContainer" class="circuit-container">
-                <svg id="circuit" class="circuit"></svg>
-                <div id="centralText" class="central-text">Central Text</div>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Kevin</span></h1>
+            <h3 class="text-animation">I'm a <span>
+            </span></h3>
+                <p>Dedicated to crafting engaging and immersive experiences. Join me as I level up my skills and dive into the wolrd of game development, fueled with passion and a relentless pursuit of achivement and self-improvement.</p> 
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class="fa-brands fa-itch-io"></i></a>
+                <a href="#"><i class='bx bx-briefcase-alt'></i></a>
             </div>
-        </section>
 
-        <section id="about" class="section">
-            <h1>About Me</h1>
-            <p>About me text.</p>
-        </section>
+            <div class="btn-group">
+                <a href="#" class="btn">Hire</a>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
 
-        <section id="projects" class="section">
-            <h1>Projects</h1>
-            <p>This is the projects section.</p>
-        </section>
+        </div>
+        <div class="home-img">
+            <img src="images\spaceship.png" alt="">
+        </div>
+    </section>
 
-        <section id="contact" class="section">
-            <h1>Contact</h1>
-            <form id="contactForm">
-                <input type="text" id="name" placeholder="Your Name" required /><br>
-                <input type="email" id="email" placeholder="Your Email" required /><br>
-                <textarea id="message" placeholder="Your Message" required></textarea><br>
-                <button type="submit">Send</button>
-            </form>
-            <div id="formOutput"></div>
-        </section>
-    </div>
+    <section class="aboutme" id="aboutme">
+        <h2 class="heading">My Journey</h2>
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2015</div>
+                <div class="timeline-content">
+                    <h3>Tech School</h3>
+                    <p>I study in a technical school a carrear on Electronics and Comunicacion, I did not get to finish it but I still learned and develop strong logic and math skills.</p>
+                </div>
+                </div>
+            
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2016</div>
+                <div class="timeline-content">
+                    <h3>Cinema Staff</h3>
+                    <p>I worked for over a year in a cinema, where I developed teamwork skills and a strong ability to work under pressure.</p>
+                </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2017</div>
+                <div class="timeline-content">
+                    <h3>Customer Service Representative</h3>
+                    <p>I dedicated a few years to the customer service industry, working in a couple of call centers. Here, I gained a set of
+                    communication and problem-solving skills.</p>
+                </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2018</div>
+                <div class="timeline-content">
+                    <h3>Game Dev Autodidact</h3>
+                    <p>My learning journey through the game development industry began with GameMaker Studio, but after my first couple of
+                    tutorials, I transitioned into Unity, where I spent the next years mastering my C# scripting and Unity editor skills,
+                    along with my OOP, design patterns, and game design knowledge.</p>
+                </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2019</div>
+                <div class="timeline-content">
+                    <h3>University</h3>
+                    <p>This year I started a Bachelors degree in Game Design and Development where I gained a solid foundation in game design principles, programming, and project management. I finish my degree in 2023</p>
+                </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3>QA Tester</h3>
+                    <p>An entry-level job where I learned the fundamentals of software testing, version control, and agile methodologies. I
+                    also had my first glance into the development process of a Game in the production and post-production stages.</p>
+                </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h3>Sound Desinger</h3>
+                    <p>I completed an internship as a Sound Designer at the studio 1 Simple Game, where I collaborated with the development
+                    team to create and implement sound effects and audio elements for various game projects. I was involved in the entire
+                    game development process, from conceptualization to deployment.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Projects</h2>
+        <div class="wrapper">
+            <div class="container">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4>Z.L.A.P.</h4>
+                            <p>Game made for the GlobalGameJam 2024</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4>Working Around</h4>
+                            <p>The first game I made for a GameJam in the summer of 2020. It was reviseted and improved a
+                                year later</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4>My Peterinary</h4>
+                            <p>This is a game I worked on as a Sound Designer during my internship.</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4>PixForce</h4>
+                            <p>A small game made as a school project.</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class="fa-brands fa-itch-io"></i></a>
+            <a href="#"><i class='bx bx-briefcase-alt'></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="#aboutme">My Journey</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            
+        </ul>
+        <p class="copyright">
+            MIT License Copyright © 2024 Kevin Rivera
+        </p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
