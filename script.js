@@ -19,6 +19,33 @@ window.onscroll = () => {
     })
 }
 
+document.getElementById('copy-email').addEventListener('click', function (event){
+    event.preventDefault();
+    const email = 'contact@kevinriverah.dev';
+    const tooltipText = document.getElementById('tooltip-text');
+    navigator.clipboard.writeText(email).then(() => {
+        tooltipText.textContent = 'Email Copied!';
+        showTooltip(tooltipText);
+        setTimeout(() => { hideTooltip(tooltipText); }, 2000);
+    }).catch(err => {
+        tooltipText.textContent = 'Failed to Copy';
+        showTooltip(tooltipText);
+        setTimeout(() => { hideTooltip(tooltipText); }, 2000);
+    })
+})
+
+function showTooltip(tooltip) {
+    tooltip.style.visibility = 'visible';
+    tooltip.style.opacity = 1;
+}
+
+function hideTooltip(tooltip) {
+    tooltip.style.visibility = 'hidden';
+    tooltip.style.opacity = 0;
+    tooltip.textContent = 'Copy Email to Clipboard'; // Reset tooltip text
+}
+
+
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
