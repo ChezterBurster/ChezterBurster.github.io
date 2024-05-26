@@ -33,6 +33,20 @@ document.getElementById('copy-email').addEventListener('click', function (event)
         setTimeout(() => { hideTooltip(tooltipText); }, 2000);
     })
 })
+document.getElementById('copy-email-footer').addEventListener('click', function (event) {
+    event.preventDefault();
+    const email = 'contact@kevinriverah.dev';
+    const tooltipText = document.getElementById('tooltip-text-footer');
+    navigator.clipboard.writeText(email).then(() => {
+        tooltipText.textContent = 'Email Copied!';
+        showTooltip(tooltipText);
+        setTimeout(() => { hideTooltip(tooltipText); }, 1000);
+    }).catch(err => {
+        tooltipText.textContent = 'Failed to Copy';
+        showTooltip(tooltipText);
+        setTimeout(() => { hideTooltip(tooltipText); }, 1000);
+    })
+})
 
 function showTooltip(tooltip) {
     tooltip.style.visibility = 'visible';

@@ -40,7 +40,7 @@
             </div>
 
             <div class="btn-group">
-                <a href="\files\Kevin_Rivera_H_resume.pdf" class="btn">Resume</a>
+                <a href="\files\Kevin_Rivera_H_resume.pdf" target="_blank" class="btn">Resume</a>
                 <a href="#contact" class="btn">Contact</a>
             </div>
 
@@ -180,19 +180,19 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="">
+        <form action="https://formspree.io/f/mzbnqkla" method="POST">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="_replyto" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="number" name="phone" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Subject">
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
         </form>
@@ -200,11 +200,11 @@
 
     <footer class="footer">
         <div class="social">
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-github'></i></a>
-            <a href="#"><i class="fa-brands fa-itch-io"></i></a>
-            <a href="#"><i class='bx bx-briefcase-alt'></i></a>
-        </div>
+            <a href="https://www.linkedin.com/in/kevin-rivera-ch/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="cheztburster.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+            <a href="https://github.com/ChezterBurster" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="#" id="copy-email-footer"><i class='bx bx-envelope'></i>
+            <span class="tooltip-text-footer" id="tooltip-text-footer">Copy Email to Clipboard</span></a></div>
 
         <ul class="list">
             <li>

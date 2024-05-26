@@ -521,6 +521,33 @@ input:checked+label .description {
     color: black;
     box-shadow: 0 0 25px var(--main-color);
 }
+.footer .tooltip-text-footer{
+    font-size: 15px;
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--second-bg-color);
+    color: var(--main-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.footer .tooltip-text-footer::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.3);
+}
 .footer ul{
     margin-top: 0;
     padding: 0;
