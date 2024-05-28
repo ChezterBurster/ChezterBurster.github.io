@@ -21,7 +21,7 @@ window.onscroll = () => {
 
 document.getElementById('copy-email').addEventListener('click', function (event){
     event.preventDefault();
-    const email = 'contact@kevinriverah.dev';
+    const email = 'contacto@kevinriverah.dev';
     const tooltipText = document.getElementById('tooltip-text');
     navigator.clipboard.writeText(email).then(() => {
         tooltipText.textContent = 'Email Copied!';
@@ -35,7 +35,7 @@ document.getElementById('copy-email').addEventListener('click', function (event)
 })
 document.getElementById('copy-email-footer').addEventListener('click', function (event) {
     event.preventDefault();
-    const email = 'contact@kevinriverah.dev';
+    const email = 'contacto@kevinriverah.dev';
     const tooltipText = document.getElementById('tooltip-text-footer');
     navigator.clipboard.writeText(email).then(() => {
         tooltipText.textContent = 'Email Copied!';
