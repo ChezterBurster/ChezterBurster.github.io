@@ -431,6 +431,16 @@ span{
 .description h4 {
     font-size: 20px;
     text-transform: uppercase;
+    color: var(--main-color);
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+}
+.description h4:hover {
+    color: var(--text-color);
+    transform: scale(1.05)translateY(-1px);
+    box-shadow: 0 0 15px var(--main-color);
+    background-color: rgba(82, 255, 255, 0.696);
+    border-radius: 5px;
 }
 .projects input{
     display: none;
